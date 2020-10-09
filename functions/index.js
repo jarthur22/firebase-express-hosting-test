@@ -1,20 +1,23 @@
 const functions = require('firebase-functions');
 const express = require('express');
 const cors = require('cors');
+const mongoose = require('mongoose');
+const vars = require("./env_vars.json");
+const auth = require('./api/auth');
+const data = require('./api/mongo/data');
 
 const app = express();
+app.use(cors());
 
+//use routes
+app.use('/auth', auth);
+app.use('/data', data);
 
-app.get("/auth", (request, response) => {
-    response.send("Auth called");
-});
+//connect Mongo
+var dbAuth = vars.database;
+const mongoURI = `mongodb+srv://${dbAuth.username}:${dbAuth.password}@cluster0.ulqar.mongodb.net/${dbAuth.db}?retryWrites=true&w=majority`;
+mongoose.connect(mongoURI, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true, useFindAndModify: true})
+.then(() => console.log('MongoDB connected...'))
+.catch(err => console.log(err));
 
-app.get('/data', (request, response) => {
-    response.send('Database call')
-})
-
-
-// // Create and Deploy Your First Cloud Functions
-// // https://firebase.google.com/docs/functions/write-firebase-functions
-//
-exports.app = functions.https.onRequest(app);
+exports.api = functions.https.onRequest(app);

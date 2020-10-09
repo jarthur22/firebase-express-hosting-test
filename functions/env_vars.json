@@ -1,0 +1,7 @@
+{
+    "database":{
+        "db": "testdb",
+        "username": "fullstack",
+        "password": "fullstack1234"
+    }
+}
