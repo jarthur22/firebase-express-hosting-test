@@ -1,17 +1,21 @@
 ## Main directory
 
-Run:
+#### Run:
+
 `firebase init`
     Hosting, Functions, Firestore, Storage(?),
     public
+
 `create-react-app public` (after installs)
 
-Install:
+#### Install:
+
 `express create-react-app`
 
-Add Folders/Files:
+#### Add Folders/Files:
 
-Change:
+#### Change:
+
 In `firebase.json`:
 ```json
 {
@@ -35,12 +39,13 @@ In `firebase.json`:
 
 ## Backend: Functions
 
-Run:
+#### Run:
 
-Install:
+#### Install:
+
 `express mongoose cors`
 
-Add Folders/Files:
+#### Add Folders/Files:
 * env_vars.json
 * -api
     * auth.js
@@ -50,7 +55,8 @@ Add Folders/Files:
             * Person.js
 
 
-Change:
+#### Change:
+
 In `package.json`: (?)
 ```json
 {
@@ -93,7 +99,7 @@ const Person = require('./models/Person');
 const app = express();
 
 app.get("/", (req, res) => {
-    Member.find().then(results => {
+    Person.find().then(results => {
         results.length > 0 ? res.json(results): res.sendStatus(400)
     })
 });
@@ -128,16 +134,20 @@ In `env_vars.json`:
 
 ## Frontend: Public
 
-Run:
+#### Run:
+
 `npm start`
+
 `npm run build`
 
-Install:
+#### Install:
+
 `axios`
 
-Add Folders/Files:
+#### Add Folders/Files:
 
-Change:
+#### Change:
+
 In `package.json`:
 ```json
 {
