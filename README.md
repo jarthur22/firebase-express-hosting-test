@@ -57,14 +57,16 @@ In `firebase.json`:
 
 #### Change:
 
-In `package.json`: (?)
+In `package.json`:
 ```json
 {
     "main": "server.js"
 }
 ```
 
-In `index.js`: (`server.js`?)
+`index.js` to `server.js`
+
+In `server.js`:
 ```javascript
 const functions = require('firebase-functions');
 const express = require('express');
