@@ -148,7 +148,7 @@ In `env_vars.json`:
 
 #### Add Folders/Files:
 
-Pick a bootswatch theme from `src/bootswatch-themes` and import in App.js
+Pick a bootswatch theme from `src/bootswatch-themes` and import in index.js
 
 #### Change:
 
