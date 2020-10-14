@@ -144,9 +144,11 @@ In `env_vars.json`:
 
 #### Install:
 
-`axios`
+`axios react-bootstrap bootstrap`
 
 #### Add Folders/Files:
+
+Pick a bootswatch theme from `src/bootswatch-themes`
 
 #### Change:
 
