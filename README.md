@@ -144,7 +144,7 @@ In `env_vars.json`:
 
 #### Install:
 
-`axios react-bootstrap bootstrap`
+`axios react-bootstrap bootstrap react-router-dom react-router-bootstrap`
 
 #### Add Folders/Files:
 

@@ -12,8 +12,12 @@
     ],
     "rewrites": [
       {
-        "source": "**",
-        "function": "api"
+        "source": "api/**",
+        "function": "index.html"
+      },
+      {
+        "source": "!api/**",
+        "destination": "public/build/index.html"
       }
     ]
   },
