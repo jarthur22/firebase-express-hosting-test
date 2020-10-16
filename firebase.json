@@ -17,7 +17,7 @@
       },
       {
         "source": "!/api/**",
-        "destination": "public/build/index.html"
+        "destination": "/index.html"
       }
     ]
   },
