@@ -158,3 +158,15 @@ In `package.json`:
     "proxy": "<insert base url for api function here>"
 }
 ```
+
+#### Add Env Variables
+
+* `cd functions`
+* `firebase functions:config:get > runtimeconfig.json`
+* Copy over vars from `runtimeconfig.json` into `env_vars.json`
+    * The formatting is stupid. do it manually.
+* Delete `runtimeconfig.json`
+
+#### Rewrites for Project Name
+
+* `public/src/projectData.json`

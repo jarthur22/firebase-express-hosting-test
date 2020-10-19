@@ -3,6 +3,10 @@ import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import PersonList from './components/home/PersonList';
 import { Container } from 'react-bootstrap';
+import axios from 'axios';
+import axiosConfigURL from './axiosConfigURL';
+
+axios.defaults.baseURL = axiosConfigURL();
 
 const App = () => {
   return (

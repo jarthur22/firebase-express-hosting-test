@@ -1,8 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 
-axios.defaults.baseURL = "http://localhost:5001/fir-express-hosting-test/us-central1";
-
 const PersonList = () => {
     const [people, setPeople] = useState([]);
 
@@ -17,7 +15,7 @@ const PersonList = () => {
     return (
         <>
             {people.map(person => (
-                <div>
+                <div key={person._id}>
                     <h1>{person.lname}, {person.fname}</h1>
                     <p>Age: {person.age}</p>
                 </div>
