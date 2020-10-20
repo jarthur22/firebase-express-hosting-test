@@ -170,3 +170,6 @@ In `package.json`:
 #### Rewrites for Project Name
 
 * `public/src/projectData.json`
+* `.firebaserc` ?
+* Root `package.json`
+* `functions/env_vars.json` ?
