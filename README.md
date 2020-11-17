@@ -148,7 +148,7 @@ In `env_vars.json`:
 
 #### Add Folders/Files:
 
-Pick a bootswatch theme from `src/bootswatch-themes` and import in index.js
+--Pick a bootswatch theme from `src/bootswatch-themes` and import in index.js--
 
 #### Change:
 
@@ -158,6 +158,9 @@ In `package.json`:
     "proxy": "<insert base url for api function here>"
 }
 ```
+
+In `public/index.html`:
+* insert CDN link for bootswatch theme under sylesheets
 
 #### Add Env Variables
 

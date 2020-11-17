@@ -1,7 +1,8 @@
 import data from './projectData.json';
 
 const axiosConfigURL = () => {
-    return process.env.PUBLIC_URL.startsWith('https://') ?
+    console.log(process.env);
+    return `${process.env.NODE_ENV}` === 'production' ?
     getLiveURL() : getDevURL();
 }
 
